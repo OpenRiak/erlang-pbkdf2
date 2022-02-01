@@ -134,12 +134,12 @@ pbkdf2(MacFunc, Password, Salt, Iterations, BlockIndex, Iteration, Prev, Acc) ->
 %-type mac_func_info() :: mac_func() | {hmac, digest_func_info()}
 %	| md4 | md5 | ripemd160 | sha | sha224 | sha256 | sha384 | sha512.
 
-resolve_mac_func({hmac, DigestFunc}) ->
+resolve_mac_func({Type, DigestFunc}) ->
 	fun(Key, Data) ->
 		%crypto:hmac(DigestFunc, Key, Data)
-		HMAC = crypto:hmac_init(DigestFunc, Key),
-		HMAC1 = crypto:hmac_update(HMAC, Data),
-		crypto:hmac_final(HMAC1)
+		HMAC = crypto:mac_init(Type, DigestFunc, Key),
+		HMAC1 = crypto:mac_update(HMAC, Data),
+		crypto:mac_final(HMAC1)
 	end;
 
 resolve_mac_func(MacFunc) when is_function(MacFunc) ->

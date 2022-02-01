@@ -1,6 +1,8 @@
 erlang-pbkdf2
 =============
 
+[![Erlang CI Actions Status](https://github.com/basho/erlang-pbkdf2/workflows/Erlang%20CI/badge.svg)](https://github.com/basho/erlang-pbkdf2/actions)
+
 A [PBKDF2][] implementation for [Erlang][] extracted from [Apache CouchDB][].
 
 [PBKDF2]: http://en.wikipedia.org/wiki/PBKDF2
