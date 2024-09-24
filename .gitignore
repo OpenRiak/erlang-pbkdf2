@@ -2,3 +2,4 @@ ebin/
 .eunit/
 _build
 .eqc-info
+rebar.lock
