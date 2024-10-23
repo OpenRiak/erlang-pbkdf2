@@ -1,7 +1,7 @@
 erlang-pbkdf2
 =============
 
-[![Erlang CI Actions Status](https://github.com/basho/erlang-pbkdf2/workflows/Erlang%20CI/badge.svg)](https://github.com/basho/erlang-pbkdf2/actions)
+![Erlang PBKDF2 OpenRiak Status](https://github.com/OpenRiak/erlang-pbkdf2/actions/workflows/erlang.yml/badge.svg?branch=openriak-3.2)
 
 A [PBKDF2][] implementation for [Erlang][] extracted from [Apache CouchDB][].
 
